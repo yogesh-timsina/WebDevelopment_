@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attribute Selectors Example</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<style>
+a[href^="#"] {
+color: blue;
+text-decoration: underline;
+}
+
+a[href^="http"] {
+color: green;
+text-decoration: none;
+}
+
+a[href^="../"] {
+color: orange;
+text-decoration: dotted;
+}
+
+a[href="#top"] {
+color: red;
+font-weight: bold;
+}
+
+a[title*="Highlighted"] {
+background-color: yellow;
+font-style: italic;
+}
+<style>
+
+
+<body>
+
+<h1 class="title">Attribute Selectors for Links</h1>
+
+<!-- Internal Link -->
+<a href="#section1" class="internal-link">Go to Section 1</a>
+
+<!-- External Link -->
+<a href="https://example.com" class="external-link" target="_blank" title="Example Link">Visit Example</a>
+
+<!-- Parent Link -->
+<a href="../parent-directory/" class="parent-link">Parent Directory</a>
+
+<!-- Top Link -->
+<a href="#top" class="top-link">Back to Top</a>
+
+<!-- Highlighted Link -->
+<a href="https://example.com" class="highlighted-link" title="Highlighted Example Link">Highlighted Example</a>
+
+<section id="section1">
+<h2>Section 1</h2>
+<p>This is section 1.</p>
+</section>
+
+</body>
+</html>

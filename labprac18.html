@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Properties Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .section {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+        }
+
+        
+
+        .scroll {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK2uzyXMAcqzbEEhry9gtWIv6cTBfplnWODA&s');
+            background-attachment: scroll;
+            background-repeat: repeat;
+            background-size: cover;
+        }
+
+        .fixed {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK2uzyXMAcqzbEEhry9gtWIv6cTBfplnWODA&s');
+            background-attachment: fixed;
+            background-repeat: repeat;
+            background-size: cover;
+        }
+
+        .repeat {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK2uzyXMAcqzbEEhry9gtWIv6cTBfplnWODA&s');
+            background-attachment: scroll;
+            background-repeat: repeat;
+            background-size: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="section scroll">
+        Background Fixed
+    
+    </div>
+
+    <div class="section fixed">
+        Background Scroll
+    </div>
+
+    <div class="section repeat">
+        Background Repeat
+    </div>
+</body>
+</html>

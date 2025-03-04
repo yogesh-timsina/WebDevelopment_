@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Prime Numbers</title>
+</head>
+<body>
+    <h2>Add Prime Numbers Program</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="addPrimes()">Add</button>
+    <p id="result"></p>
+
+    <script>
+        // Function to check if a number is prime
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        // Function to add two numbers if both are prime
+        function addPrimes() {
+            // Get the input values
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+            
+            // Check if both numbers are prime
+            if (isPrime(num1) && isPrime(num2)) {
+                // Add the numbers
+                let sum = num1 + num2;
+                // Display the result
+                document.getElementById("result").innerText = "Sum: " + sum;
+            } else {
+                // Display a message if either number is not prime
+                document.getElementById("result").innerText = "Both numbers must be prime.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validation Program</title>
+    <style>
+        .password-container {
+            position: relative;
+            display: inline-block;
+        }
+        .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Validation Program</h2>
+    
+    <h3>Email Validation</h3>
+    <input type="text" id="email" placeholder="Enter your email">
+    <button onclick="validateEmail()">Validate Email</button>
+    <p id="emailResult"></p>
+    
+    <h3>Phone Number Validation</h3>
+    <input type="text" id="phoneNumber" placeholder="Enter your phone number">
+    <button onclick="validatePhoneNumber()">Validate Phone Number</button>
+    <p id="phoneResult"></p>
+    
+    <h3>Password Validation</h3>
+    <div class="password-container">
+        <input type="password" id="password" placeholder="Enter your password">
+        <span class="toggle-password" onclick="togglePasswordVisibility()">&#128065;</span>
+    </div>
+    <button onclick="validatePassword()">Validate Password</button>
+    <p id="passwordResult"></p>
+
+    <script>
+        // Function to validate email
+        function validateEmail() {
+            let email = document.getElementById("email").value;
+            let emailPattern = /^[^\s@]+@(gmail\.com|hotmail\.com)$/;
+            let result = emailPattern.test(email) ? "Valid Email" : "Invalid Email";
+            document.getElementById("emailResult").innerText = result;
+        }
+
+        // Function to validate phone number
+        function validatePhoneNumber() {
+            let phoneNumber = document.getElementById("phoneNumber").value;
+            let phonePattern = /^(9841\d{6}|9851\d{6}|980\d{7})$/;
+            let result = phonePattern.test(phoneNumber) ? "Valid Phone Number" : "Invalid Phone Number";
+            document.getElementById("phoneResult").innerText = result;
+        }
+
+        // Function to validate password
+        function validatePassword() {
+            let password = document.getElementById("password").value;
+            let minLength = password.length >= 6;
+            let hasUpperCase = /[A-Z]/.test(password);
+            let hasLowerCase = /[a-z]/.test(password);
+            let hasNumber = /\d/.test(password);
+            let hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+            
+            let isValidPassword = minLength && hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar;
+            let result = isValidPassword ? "Valid Password" : "Invalid Password";
+            document.getElementById("passwordResult").innerText = result;
+        }
+
+        // Function to toggle password visibility
+        function togglePasswordVisibility() {
+            let passwordInput = document.getElementById("password");
+            let passwordType = passwordInput.getAttribute("type");
+            if (passwordType === "password") {
+                passwordInput.setAttribute("type", "text");
+            } else {
+                passwordInput.setAttribute("type", "password");
+            }
+        }
+    </script>
+</body>
+</html>

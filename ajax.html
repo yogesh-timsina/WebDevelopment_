@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Content Renderer</title>
+</head>
+<body>
+    <h1>File Content Renderer</h1>
+    <div id="file-content"></div>
+
+    <script>
+        function fetchFileContent() {
+            let xhr = new XMLHttpRequest();
+            let url = 'example.txt';
+            xhr.open('GET', url, true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    document.getElementById('file-content').innerText = xhr.responseText;
+                } else {
+                    document.getElementById('file-content').innerText = 'Error fetching file content';
+                }
+            };
+            xhr.send();
+        }
+        window.onload = fetchFileContent;
+    </script>
+</body>
+</html>

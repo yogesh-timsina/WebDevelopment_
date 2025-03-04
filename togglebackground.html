@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Toggle</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <button id="toggleButton">Toggle Background Color</button>
+    <p id="toggleParagraph">Click the button to toggle background color.</p>
+
+    <script>
+        $(document).ready(function() {
+            $('#toggleButton').click(function() {
+                $('body').toggleClass('bg-color');
+                $('#toggleParagraph').toggle();
+            });
+        });
+    </script>
+    <style>
+        .bg-color {
+            background-color: lightblue;
+        }
+    </style>
+</body>
+</html>
+

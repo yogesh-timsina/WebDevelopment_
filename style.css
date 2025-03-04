@@ -1,0 +1,52 @@
+div{
+    height: 50px;    
+    width: 50px;   
+    display: inline-block;
+    border: 2px solid rgb(255, 0, 187);
+    justify-content: center; 
+   }
+#container{
+    width: 100px;
+    height: 50px;
+    display: grid;
+    border: 0cap;
+    
+    align-items: center;
+    
+
+}
+#Flexbox1{
+    
+    height: 100px; ;
+    width: 200px;
+    display: grid;
+    background-color: yellow;
+}
+#Flexbox2{
+   
+    height:100px ;
+    width:200px;
+    display: grid;
+    background-color: green;
+}
+ #Flexbox3{
+        
+        height:100px;
+        width:200px;
+        display: grid;
+        background-color: black;
+ }
+ #Flexbox4{
+            
+            height:100px;
+            width:200px;
+            display: grid;
+            background-color: blue;
+ }
+            #Flexbox5{
+                
+                height:100px;
+                width:200px;
+                display: grid;
+                background-color: red;
+            }

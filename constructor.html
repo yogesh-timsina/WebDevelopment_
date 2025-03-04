@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Constructor Example</title>
+</head>
+<body>
+    <h2>First Name and Last Name</h2>
+    <p id="beforeChange"></p>
+    <p id="afterChange"></p>
+
+    <script>
+        // Object constructor to set first name and last name
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+
+            // Method to change the last name
+            this.changeLastName = function(newLastName) {
+                this.lastName = newLastName;
+            };
+
+            // Method to get the full name
+            this.getFullName = function() {
+                return this.firstName + " " + this.lastName;
+            };
+        }
+
+        // Create a new Person object
+        let person = new Person("John", "Doe");
+
+        // Display the full name before changing the last name
+        document.getElementById("beforeChange").innerText = "Before change: " + person.getFullName();
+
+        // Change the last name
+        person.changeLastName("Smith");
+
+        // Display the full name after changing the last name
+        document.getElementById("afterChange").innerText = "After change: " + person.getFullName();
+    </script>
+</body>
+</html>

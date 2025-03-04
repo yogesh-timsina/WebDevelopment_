@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+    class Vehicle {
+        constructor(model, makeYear) {
+            this.model = model;
+            this.makeYear = makeYear;
+        }
+    
+        calculateAge() {
+            let currentYear = new Date().getFullYear();
+            return currentYear - this.makeYear;
+        }
+    }
+    
+    class Car extends Vehicle {
+        constructor(model, makeYear) {
+            super(model, makeYear);
+        }
+    }
+    
+    let car = new Car("Toyota", 2010);
+    console.log("Car Model:", car.model);
+    console.log("Car Make Year:", car.makeYear);
+    console.log("Car Age:", car.calculateAge());
+</Script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Animation</title>
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/premium-vector/gradient-race-track-illustration_23-2150126513.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        #car-container {
+            position: absolute;
+            top: 200px; /* Adjust top position */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%);
+            z-index: 1; /* Ensure car is on top of the track */
+        }
+        #car {
+            width: 50px; /* Adjust car size */
+            height: 100px; /* Adjust car size */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: transparent;
+            border: 2px solid #333;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="car-container">
+        <img id="car" src="https://www.shutterstock.com/image-illustration/red-suv-car-top-view-260nw-1429788992.jpg" alt="Car">
+    </div>
+    <div id="controls">
+        <button onclick="moveReverse()">&#171;</button> <!-- Reverse -->
+        <button onclick="stop()">Pause</button> <!-- Stop -->
+        <button onclick="moveForward()">&#187;</button> <!-- Forward -->
+    </div>
+
+    <script>
+        let car = document.getElementById('car');
+        let track = document.body;
+        let trackBounds = track.getBoundingClientRect();
+        let currentLeft = 0;
+        let animationInterval;
+        const carWidth = car.offsetWidth;
+
+        function moveForward() {
+            stopAnimation();
+            animationInterval = setInterval(function() {
+                currentLeft += 5; // Adjust the speed as needed
+                if (currentLeft <= trackBounds.width - carWidth) {
+                    car.style.left = currentLeft + 'px';
+                } else {
+                    stopAnimation();
+                }
+            }, 50); // Adjust the interval as needed
+        }
+
+        function moveReverse() {
+            stopAnimation();
+            animationInterval = setInterval(function() {
+                currentLeft -= 5; // Adjust the speed as needed
+                if (currentLeft >= 0) {
+                    car.style.left = currentLeft + 'px';
+                } else {
+                    stopAnimation();
+                }
+            }, 50); // Adjust the interval as needed
+        }
+
+        function stop() {
+            stopAnimation();
+        }
+
+        function stopAnimation() {
+            clearInterval(animationInterval);
+        }
+    </script>
+</body>
+</html>

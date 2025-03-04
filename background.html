@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Properties Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+        }
+
+        .scroll {
+            background-image: url('https://via.placeholder.com/300');
+            background-attachment: scroll;
+            background-repeat: repeat;
+        }
+
+        .fixed {
+            background-image: url('https://via.placeholder.com/300');
+            background-attachment: fixed;
+            background-repeat: repeat;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box scroll">
+            Scroll Background
+        </div>
+        <div class="box fixed">
+            Fixed Background
+        </div>
+    </div>
+</body>
+</html>

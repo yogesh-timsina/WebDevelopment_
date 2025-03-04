@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up Form</title>
+<style>
+  .center {
+    text-align: left;
+  }
+  
+  
+</style>
+<script>
+function validateForm() {
+  var userId = document.getElementById("userId").value;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var confirmPassword = document.getElementById("confirmPassword").value;
+
+  
+  var useridpattern=/^[0-9]{5}$/;
+  if ( !useridpattern.test(userId)) {
+    alert("User ID must be a number.");
+    return false;
+  }
+
+  
+  var phonePattern = /^98[0-9]{7}$/;
+  if (!phonePattern.test(phone)) {
+    alert("Phone number must be 10 digits.");
+    return false;
+  }
+
+
+  }
+
+  
+  if (password !== confirmPassword) {
+    alert("Passwords do not match.");
+    return false;
+  }
+
+  return true;
+
+</script>
+</head>
+<body>
+
+<form onsubmit="return validateForm()">
+    <fieldset >
+  <label for="userId">User ID :</label>
+  <input type="number" id="userId" name="userId" required><br>
+
+  <label for="phone">Phone:</label>
+  <input type="number" id="phone" name="phone" required><br>
+
+  <label for="email">Email :</label>
+  <input type="email" id="email" name="email" required><br>
+
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" required><br>
+
+  <label for="confirmPassword">Confirm Password:</label><br>
+  <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+
+  <div class="center">
+    <input type="submit" value="Sign Up">
+  </div>
+</fieldset>
+</form>
+</body>
+</html>

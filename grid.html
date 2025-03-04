@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout with CSS Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-areas:
+                "header header header"
+                "sidebar navigation ads"
+                "sidebar main ads"
+                "footer footer footer";
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid red;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid red;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            padding: 20px;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        .navigation {
+            grid-area: navigation;
+            padding: 20px;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        .main-content {
+            grid-area: main;
+            padding: 20px;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        .ads {
+            grid-area: ads;
+            padding: 20px;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas:
+                    "header"
+                    "navigation"
+                    "main"
+                    "sidebar"
+                    "ads"
+                    "footer";
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Header
+        </div>
+        <div class="sidebar">
+            Sidebar
+        </div>
+        <div class="navigation">
+            Navigation
+        </div>
+        <div class="main-content">
+            Main
+        </div>
+        <div class="ads">
+            Ads
+        </div>
+        <div class="footer">
+            Footer
+        </div>
+    </div>
+</body>
+</html>

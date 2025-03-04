@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        .section {
+            width: 33.33%; /* One-third of the full width */
+            margin-bottom: 20px;
+        }
+
+        .container-inline-block,
+        .container-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .container-block {
+            flex-direction: column;
+        }
+
+        .inline {
+            display: inline;
+            background-color: yellow;
+        }
+
+        .inline-block {
+            display: inline-block;
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 100px; /* To center text vertically */
+        }
+
+        .block {
+            display: block;
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 100px; /* To center text vertically */
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h2>Display: inline</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aliquam 
+            non nisi ut venenatis dictum. Curabitur vulputate, ligula a 
+            suscipit efficitur, urna felis consectetur odio, a scelerisque magna quam non orci. 
+            Maecenas aliquet <span class="inline">aliquam</span> <span class="inline">venenatis</span> varius.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Display: inline-block</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            non nisi ut venenatis dictum. Curabitur vulputate, ligula a 
+            suscipit efficitur, urna felis consectetur odio, a scelerisque magna quam non orci. 
+            Maecenas aliquet <span class="inline-block">aliquam</span> <span class="inline-block">venenatis</span> varius.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Display: block</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam 
+            non nisi ut venenatis dictum. Curabitur vulputate, ligula a 
+            suscipit efficitur, urna felis consectetur odio, a scelerisque magna quam non orci. 
+            Maecenas aliquet <span class="block">aliquam</span> <span class="block">venenatis</span> varius.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add or Subtract Numbers</title>
+</head>
+<body>
+    <h2>Add or Subtract Numbers Program</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="processNumbers()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        // Function to check if a number is even
+        function isEven(num) {
+            return num % 2 === 0;
+        }
+
+        // Function to process the numbers: add if even, else subtract
+        function processNumbers() {
+            // Get the input values
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+            
+            let result;
+            // Check if both numbers are even
+            if (isEven(num1) && isEven(num2)) {
+                // Add the numbers if both are even
+                result = num1 + num2;
+                document.getElementById("result").innerText = "Sum: " + result;
+            } else {
+                // Find the difference if either or both are not even
+                result = Math.abs(num1 - num2);
+                document.getElementById("result").innerText = "Difference: " + result;
+            }
+        }
+    </script>
+</body>
+</html>

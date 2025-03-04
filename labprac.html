@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pseudo-elements Example</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  /* Styling the first paragraph */
+.styled-paragraph.red {
+  color: red;
+}
+
+/* Styling the second paragraph */
+.styled-paragraph.blue {
+  color: blue;
+}
+
+/* Styling the third paragraph */
+.styled-paragraph.yellow {
+  background-color: yellow;
+}
+
+/* Styling the fourth paragraph */
+.styled-paragraph.black {
+  color: black;
+}
+
+/* Container for before and after messages */
+.before-after-messages::before {
+  content: "Before";
+  display: block;
+  font-weight: bold;
+  margin-top: 20px; /* Add some space before the before message */
+  color: black;
+}
+
+.before-after-messages::after {
+  content: "After";
+  display: block;
+  font-weight: bold;
+  color: black;
+}
+
+/* Specific messages */
+.before-after-messages::before {
+  content: "Before\nAdded: Hi!";
+  color: blue;
+}
+
+.before-after-messages::after {
+  content: "After\nAdded: Bye!";
+  color: red;
+}
+
+</style>
+<body>
+
+<p class="styled-paragraph red">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+
+<p class="styled-paragraph blue">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+
+<p class="styled-paragraph yellow">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+
+<p class="styled-paragraph black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+
+<div class="before-after-messages"></div>
+
+</body>
+</html>

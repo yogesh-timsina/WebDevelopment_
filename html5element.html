@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Homepage using Divs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .nav {
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        .nav ul {
+            list-style-type: disc;
+            padding-left: 40px;
+        }
+
+        .nav ul li {
+            margin: 5px 0;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+
+        .main-content {
+            flex: 3;
+            padding: 10px;
+        }
+
+        .sidebar {
+            flex: 1;
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
+
+        .footer {
+            background-color: black;
+            text-align: center;
+            color: #f2f2f2;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Welcome to My Website</h1>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="main-content">
+            <p>This is the main content area. You can find the main content here.</p>
+            <img src="" alt="This is an image section">
+            <img src="" alt="This is the next image section">
+        </div>
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>This is a sidebar paragraph. It contains an image description.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <h3>&copy; 2023 All rights reserved&trade;</h3>
+        <p>Reach out to us for any inquiries or feedback.</p>
+    </div>
+</body>
+
+</html>

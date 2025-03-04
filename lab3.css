@@ -1,0 +1,39 @@
+*{
+    background-color: rgb(34, 25, 25);
+    text-align: center;
+    color: aliceblue;
+    
+    
+    }
+    
+    
+    #home{
+    height: 150px;
+    width: 100%;
+    text-align: left;
+    background-color: rgb(235, 205, 11);
+    color
+    
+    }
+    #about{
+    height: 150px;
+    text-align: left;
+    background-color: crimson;
+    }
+    #services{
+    height: 150px;
+    text-align: left;
+    background-color: rgb(44, 145, 44);
+    }
+    #contact{
+    height: 150px;
+    text-align: left;
+    background-color: rgb(70, 81, 232);
+    }
+    .footer{
+    background-color: rgb(23, 12, 12);
+    }
+    #head{
+    display: flex;
+    justify-content: space-between;
+    }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pseudo-elements Example</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    
+.styled-paragraph.red {
+  color: red;
+}
+
+
+.styled-paragraph.blue {
+  color: blue;
+}
+
+
+.styled-paragraph.yellow {
+  background-color: yellow;
+}
+
+
+.styled-paragraph.black {
+  color: black;
+}
+
+
+.before-after-messages::before {
+  content: "Before";
+  display: block;
+  font-weight: bold;
+  margin-top: 20px; 
+  color: black;
+}
+
+.before-after-messages::after {
+  content: "After";
+  display: block;
+  font-weight: bold;
+  color: black;
+}
+
+
+.before-after-messages::before {
+  content: "Before\nAdded: Hi!";
+  color: blue;
+}
+
+.before-after-messages::after {
+  content: "After\nAdded: Bye!";
+  color: red;
+}
+
+</style>
+<body>
+
+<p class="styled-paragraph red">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+
+<p class="styled-paragraph blue">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+
+<p class="styled-paragraph yellow">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+
+<p class="styled-paragraph black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p><br>
+<p>Before and After</p>
+
+<div class="before-after-messages"></div>
+
+</body>
+</html>

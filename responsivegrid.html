@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "navigation"
+        "main"
+        "sidebar"
+        "footer";
+    gap: 10px;
+    padding: 10px;
+}
+
+header, nav, main, aside, footer {
+    border: 2px solid red;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    grid-area: header;
+}
+
+.navigation {
+    grid-area: navigation;
+}
+
+.main {
+    grid-area: main;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+@media (min-width: 600px) {
+    .container {
+        grid-template-areas:
+            "header header"
+            "navigation navigation"
+            "main sidebar"
+            "footer footer";
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">Header</header>
+        <nav class="navigation">Navigation</nav>
+        <main class="main">Main</main>
+        <aside class="sidebar">Sidebar</aside>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>

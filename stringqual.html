@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compare Strings</title>
+</head>
+<body>
+    <h2>Compare Strings Program</h2>
+    <input type="text" id="string1" placeholder="Enter first string">
+    <input type="text" id="string2" placeholder="Enter second string">
+    <button onclick="compareStrings()">Compare</button>
+    <p id="result"></p>
+
+    <script>
+        // Function to compare two strings
+        function compareStrings() {
+            // Get the input values
+            let str1 = document.getElementById("string1").value;
+            let str2 = document.getElementById("string2").value;
+            
+            // Compare the strings
+            if (str1 === str2) {
+                // Display the first string in uppercase if they are equal
+                document.getElementById("result").innerText = "The first string is in uppercase: " + str1.toUpperCase();
+            } else {
+                // Display a message if the strings are not equal
+                document.getElementById("result").innerText = "The strings are not equal.";
+            }
+        }
+    </script>
+</body>
+</html>
